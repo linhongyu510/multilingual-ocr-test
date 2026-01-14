@@ -1,0 +1,33 @@
+{
+  "total_samples": 690,
+  "success_rate": 0.6521739130434783,
+  "avg_accuracy": 0.6774588852627956,
+  "avg_response_time": 7.783557843470919,
+  "supported_languages": [
+    "zh",
+    "vi",
+    "ms",
+    "ur",
+    "ja",
+    "te",
+    "th",
+    "mn",
+    "ne",
+    "ta",
+    "id",
+    "ko",
+    "tl",
+    "ug",
+    "hi"
+  ],
+  "unsupported_languages": [
+    "kn",
+    "si",
+    "bn",
+    "lo",
+    "my",
+    "zh-Hant",
+    "km",
+    "ml"
+  ]
+}

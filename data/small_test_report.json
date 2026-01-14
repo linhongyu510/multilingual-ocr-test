@@ -1,0 +1,88 @@
+{
+  "timestamp": "2025-10-23T10:11:13.251055",
+  "api_url": "http://localhost:16110",
+  "total_samples": 5,
+  "successful_samples": 0,
+  "failed_samples": 5,
+  "success_rate": 0.0,
+  "avg_accuracy": 0.0,
+  "performance": {
+    "avg_response_time": 0.42905330657958984,
+    "min_response_time": 0.0017695426940917969,
+    "max_response_time": 2.137289047241211,
+    "total_time": 2.145266532897949
+  },
+  "language_stats": {
+    "zh": {
+      "total": 5,
+      "success": 0,
+      "accuracies": [],
+      "response_times": [
+        2.137289047241211,
+        0.0025022029876708984,
+        0.0019083023071289062,
+        0.0017974376678466797,
+        0.0017695426940917969
+      ],
+      "avg_accuracy": 0.0,
+      "avg_response_time": 0.42905330657958984
+    }
+  },
+  "detailed_results": [
+    {
+      "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_extended/zh/zh_14.png",
+      "language": "zh",
+      "ground_truth": "这是奇妙的经历。",
+      "predicted_text": "",
+      "accuracy": 0.0,
+      "response_time": 2.137289047241211,
+      "status": "error_401",
+      "confidence": 0.0,
+      "error_message": "{\"detail\":\"无效的API密钥\"}"
+    },
+    {
+      "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_extended/zh/zh_05.png",
+      "language": "zh",
+      "ground_truth": "今天天气很好。",
+      "predicted_text": "",
+      "accuracy": 0.0,
+      "response_time": 0.0025022029876708984,
+      "status": "error_401",
+      "confidence": 0.0,
+      "error_message": "{\"detail\":\"无效的API密钥\"}"
+    },
+    {
+      "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_extended/zh/zh_23.png",
+      "language": "zh",
+      "ground_truth": "愿你前途光明。",
+      "predicted_text": "",
+      "accuracy": 0.0,
+      "response_time": 0.0019083023071289062,
+      "status": "error_401",
+      "confidence": 0.0,
+      "error_message": "{\"detail\":\"无效的API密钥\"}"
+    },
+    {
+      "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_extended/zh/zh_03.png",
+      "language": "zh",
+      "ground_truth": "这是一个美好的日子。你要去哪里？",
+      "predicted_text": "",
+      "accuracy": 0.0,
+      "response_time": 0.0017974376678466797,
+      "status": "error_401",
+      "confidence": 0.0,
+      "error_message": "{\"detail\":\"无效的API密钥\"}"
+    },
+    {
+      "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_extended/zh/zh_09.png",
+      "language": "zh",
+      "ground_truth": "我想和你共度时光。",
+      "predicted_text": "",
+      "accuracy": 0.0,
+      "response_time": 0.0017695426940917969,
+      "status": "error_401",
+      "confidence": 0.0,
+      "error_message": "{\"detail\":\"无效的API密钥\"}"
+    }
+  ]
+}
