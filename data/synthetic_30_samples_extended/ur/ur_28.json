@@ -1,0 +1,12 @@
+{
+  "language": "ur",
+  "text": "میں آپ کے ساتھ فخر محسوس کرتا ہوں۔",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch2/ur/ur_28.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch2/ur/ur_28.txt",
+  "char_count": 34,
+  "word_count": 8,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

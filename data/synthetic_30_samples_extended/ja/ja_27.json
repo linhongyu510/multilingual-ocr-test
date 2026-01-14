@@ -1,0 +1,12 @@
+{
+  "language": "ja",
+  "text": "これは神聖な日です。",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/ja/ja_27.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/ja/ja_27.txt",
+  "char_count": 10,
+  "word_count": 1,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

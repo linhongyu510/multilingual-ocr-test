@@ -1,0 +1,12 @@
+{
+  "language": "id",
+  "text": "Saya bisa melakukan sesuatu untuk Anda.",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/id/id_12.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/id/id_12.txt",
+  "char_count": 39,
+  "word_count": 6,
+  "font_used": "perfect_font_30_samples_batch3",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

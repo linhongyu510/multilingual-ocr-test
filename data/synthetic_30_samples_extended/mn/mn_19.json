@@ -1,0 +1,15 @@
+{
+  "language": "mn",
+  "text": "Би танд тусалхад бэлэн байна.",
+  "image_path": "mn/mn_19.png",
+  "text_path": "mn/mn_19.txt",
+  "char_count": 29,
+  "word_count": 5,
+  "font_used": "NotoSansMongolian-Regular-72px",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30,
+  "regenerated": true,
+  "regeneration_date": "2025-10-23",
+  "font_optimized": true
+}

@@ -1,0 +1,12 @@
+{
+  "language": "ml",
+  "text": "ഞാൻ നിങ്ങളെ സഹായിക്കാൻ ഇവിടെയുണ്ട്।",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/ml/ml_06.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/ml/ml_06.txt",
+  "char_count": 35,
+  "word_count": 4,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

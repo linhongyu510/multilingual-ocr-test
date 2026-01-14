@@ -1,0 +1,12 @@
+{
+  "language": "ug",
+  "text": "مەن سىزگە ياردەم قىلىش ئۈچۈن بۇ يەردە.",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/ug/ug_06.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/ug/ug_06.txt",
+  "char_count": 38,
+  "word_count": 7,
+  "font_used": "perfect_font_30_samples_batch3",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

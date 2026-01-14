@@ -1,0 +1,12 @@
+{
+  "language": "lo",
+  "text": "ວັນຂອງທ່ານດີ.",
+  "image_path": "lo/lo_13.png",
+  "text_path": "lo/lo_13.txt",
+  "char_count": 13,
+  "word_count": 1,
+  "font_used": "noto_font_final",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

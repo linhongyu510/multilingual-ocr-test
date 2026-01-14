@@ -1,0 +1,12 @@
+{
+  "language": "th",
+  "text": "ฉันอยู่ที่นี่เพื่อความสุขของคุณ",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch2/th/th_15.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch2/th/th_15.txt",
+  "char_count": 31,
+  "word_count": 1,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

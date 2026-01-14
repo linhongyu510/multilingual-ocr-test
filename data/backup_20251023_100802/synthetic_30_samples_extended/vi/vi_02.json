@@ -1,0 +1,12 @@
+{
+  "language": "vi",
+  "text": "Chúc bạn một ngày tốt lành. Tôi có thể giúp bạn.",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/vi/vi_02.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/vi/vi_02.txt",
+  "char_count": 48,
+  "word_count": 11,
+  "font_used": "perfect_font_30_samples_batch3",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

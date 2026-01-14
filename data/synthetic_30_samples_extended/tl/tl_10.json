@@ -1,0 +1,12 @@
+{
+  "language": "tl",
+  "text": "Maligayang pagdating. Nasa serbisyo mo ako.",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/tl/tl_10.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/tl/tl_10.txt",
+  "char_count": 43,
+  "word_count": 6,
+  "font_used": "perfect_font_30_samples_batch3",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

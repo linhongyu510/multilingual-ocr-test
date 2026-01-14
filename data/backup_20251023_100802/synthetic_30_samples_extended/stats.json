@@ -1,0 +1,54 @@
+{
+  "total_samples": 720,
+  "languages": 24,
+  "language_list": [
+    "my",
+    "bn",
+    "ko",
+    "hi",
+    "km",
+    "ne",
+    "zh",
+    "ja",
+    "ur",
+    "ml",
+    "kn",
+    "si",
+    "te",
+    "th",
+    "ta",
+    "zh-Hant",
+    "lo",
+    "id",
+    "vi",
+    "tl",
+    "ms",
+    "km",
+    "mn",
+    "ug"
+  ],
+  "no_garbled": true,
+  "is_full_text": true,
+  "samples_per_language": 30,
+  "description": "扩展版多语言合成数据集 - 包含24种语言（原有16种 + 新增8种）",
+  "batch1_samples": 270,
+  "batch2_samples": 210,
+  "merged_from": [
+    "synthetic_30_samples_batch1",
+    "synthetic_30_samples_batch2"
+  ],
+  "new_languages": [
+    "lo",
+    "id",
+    "vi",
+    "tl",
+    "ms",
+    "km",
+    "mn",
+    "ug"
+  ],
+  "extended_from": [
+    "synthetic_30_samples_final",
+    "synthetic_30_samples_batch3"
+  ]
+}

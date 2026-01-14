@@ -1,0 +1,12 @@
+{
+  "language": "mn",
+  "text": "Энэ сайн өдөр.",
+  "image_path": "mn/mn_18.png",
+  "text_path": "mn/mn_18.txt",
+  "char_count": 14,
+  "word_count": 3,
+  "font_used": "NotoSansMongolian-Regular-72px",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

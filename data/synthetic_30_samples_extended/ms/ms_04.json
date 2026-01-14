@@ -1,0 +1,12 @@
+{
+  "language": "ms",
+  "text": "Saya gembira bertemu dengan anda. Siapa nama anda?",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/ms/ms_04.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/ms/ms_04.txt",
+  "char_count": 50,
+  "word_count": 8,
+  "font_used": "perfect_font_30_samples_batch3",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

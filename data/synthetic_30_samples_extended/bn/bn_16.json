@@ -1,0 +1,12 @@
+{
+  "language": "bn",
+  "text": "আপনার সময় খুব মূল্যবান।",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/bn/bn_16.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/bn/bn_16.txt",
+  "char_count": 24,
+  "word_count": 4,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

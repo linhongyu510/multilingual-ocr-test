@@ -1,0 +1,12 @@
+{
+  "language": "ta",
+  "text": "உங்கள் நாள் நல்லதாக இருக்கட்டும்। நான் உங்களுக்கு உதவ முடியும்।",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch2/ta/ta_02.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch2/ta/ta_02.txt",
+  "char_count": 63,
+  "word_count": 8,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

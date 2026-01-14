@@ -1,0 +1,12 @@
+{
+  "language": "zh",
+  "text": "我和你在一起很开心。",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch2/zh/zh_22.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch2/zh/zh_22.txt",
+  "char_count": 10,
+  "word_count": 1,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

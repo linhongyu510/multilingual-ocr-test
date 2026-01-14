@@ -1,0 +1,12 @@
+{
+  "language": "ne",
+  "text": "नमस्ते, तपाईं कसरी हुनुहुन्छ? म ठिक छु।",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/ne/ne_00.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/ne/ne_00.txt",
+  "char_count": 39,
+  "word_count": 7,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

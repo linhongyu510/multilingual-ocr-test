@@ -1,0 +1,12 @@
+{
+  "language": "lo",
+  "text": "ຂ້ອຍດີໃຈທີ່ໄດ້ພົບທ່ານ. ຊື່ຂອງທ່ານແມ່ນຫຍັງ?",
+  "image_path": "lo/lo_04.png",
+  "text_path": "lo/lo_04.txt",
+  "char_count": 42,
+  "word_count": 2,
+  "font_used": "noto_font_final",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

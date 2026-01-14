@@ -1,0 +1,12 @@
+{
+  "language": "si",
+  "text": "මම ඔබ සමඟ කාලය ගත කිරීමට කැමතියි।",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch2/si/si_09.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch2/si/si_09.txt",
+  "char_count": 33,
+  "word_count": 7,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

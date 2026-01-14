@@ -1,0 +1,12 @@
+{
+  "language": "ko",
+  "text": "안녕하세요, 어떻게 지내세요? 저는 잘 지내요.",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/ko/ko_00.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/ko/ko_00.txt",
+  "char_count": 26,
+  "word_count": 6,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

@@ -1,0 +1,12 @@
+{
+  "language": "th",
+  "text": "ฉันภูมิใจกับคุณ",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch2/th/th_28.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch2/th/th_28.txt",
+  "char_count": 15,
+  "word_count": 1,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

@@ -1,0 +1,12 @@
+{
+  "language": "kn",
+  "text": "ನಿಮ್ಮನ್ನು ಭೇಟಿಯಾಗಿ ಸಂತೋಷವಾಗಿದೆ। ನಿಮ್ಮ ಹೆಸರೇನು?",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/kn/kn_04.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/kn/kn_04.txt",
+  "char_count": 46,
+  "word_count": 5,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

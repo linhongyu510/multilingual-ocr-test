@@ -1,0 +1,12 @@
+{
+  "language": "mn",
+  "text": "Баярлалаа, энэ маш сайн.",
+  "image_path": "mn/mn_01.png",
+  "text_path": "mn/mn_01.txt",
+  "char_count": 24,
+  "word_count": 4,
+  "font_used": "NotoSansMongolian-Regular-72px",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

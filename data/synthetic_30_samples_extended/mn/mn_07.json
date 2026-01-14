@@ -1,0 +1,15 @@
+{
+  "language": "mn",
+  "text": "Та надтай ярилцахыг хүсэж байна уу?",
+  "image_path": "mn/mn_07.png",
+  "text_path": "mn/mn_07.txt",
+  "char_count": 35,
+  "word_count": 6,
+  "font_used": "NotoSansMongolian-Regular-72px",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30,
+  "regenerated": true,
+  "regeneration_date": "2025-10-23",
+  "font_optimized": true
+}

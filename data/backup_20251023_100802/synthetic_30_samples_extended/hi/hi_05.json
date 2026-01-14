@@ -1,0 +1,12 @@
+{
+  "language": "hi",
+  "text": "आज मौसम बहुत अच्छा है।",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/hi/hi_05.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/hi/hi_05.txt",
+  "char_count": 22,
+  "word_count": 5,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

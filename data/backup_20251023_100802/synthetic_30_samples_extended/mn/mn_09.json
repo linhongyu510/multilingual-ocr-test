@@ -1,0 +1,12 @@
+{
+  "language": "mn",
+  "text": "Би тантай цаг өнгөрөөхийг хүсч байна.",
+  "image_path": "mn/mn_09.png",
+  "text_path": "mn/mn_09.txt",
+  "char_count": 37,
+  "word_count": 6,
+  "font_used": "NotoSansMongolian-Regular-72px",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

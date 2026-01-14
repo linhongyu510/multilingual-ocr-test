@@ -1,0 +1,12 @@
+{
+  "language": "mn",
+  "text": "Би энд танд тусалж байна.",
+  "image_path": "mn/mn_06.png",
+  "text_path": "mn/mn_06.txt",
+  "char_count": 25,
+  "word_count": 5,
+  "font_used": "NotoSansMongolian-Regular-72px",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

@@ -1,0 +1,12 @@
+{
+  "language": "mn",
+  "text": "Би тантай санал нийлж байна.",
+  "image_path": "mn/mn_17.png",
+  "text_path": "mn/mn_17.txt",
+  "char_count": 28,
+  "word_count": 5,
+  "font_used": "NotoSansMongolian-Regular-72px",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

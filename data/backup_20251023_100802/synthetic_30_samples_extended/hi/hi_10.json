@@ -1,0 +1,12 @@
+{
+  "language": "hi",
+  "text": "आपका स्वागत है। मैं आपकी सेवा में हूं।",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/hi/hi_10.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/hi/hi_10.txt",
+  "char_count": 38,
+  "word_count": 8,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

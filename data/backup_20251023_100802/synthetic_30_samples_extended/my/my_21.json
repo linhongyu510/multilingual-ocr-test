@@ -1,0 +1,12 @@
+{
+  "language": "my",
+  "text": "ဒါက ကြီးကျယ်တဲ့နေ့ပါ။",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/my/my_21.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/my/my_21.txt",
+  "char_count": 21,
+  "word_count": 2,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

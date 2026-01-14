@@ -1,0 +1,12 @@
+{
+  "language": "vi",
+  "text": "Tôi có thể làm gì đó cho bạn.",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/vi/vi_12.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/vi/vi_12.txt",
+  "char_count": 29,
+  "word_count": 8,
+  "font_used": "perfect_font_30_samples_batch3",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

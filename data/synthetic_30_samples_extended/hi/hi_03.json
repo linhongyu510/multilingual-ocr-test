@@ -1,0 +1,15 @@
+{
+  "language": "hi",
+  "text": "यह एक सुंदर दिन है। आप कहां जा रहे हैं?",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/hi/hi_03.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/hi/hi_03.txt",
+  "char_count": 39,
+  "word_count": 10,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30,
+  "regenerated": true,
+  "regeneration_date": "2025-10-23",
+  "font_optimized": true
+}

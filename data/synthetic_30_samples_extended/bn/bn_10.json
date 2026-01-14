@@ -1,0 +1,12 @@
+{
+  "language": "bn",
+  "text": "আপনাকে স্বাগতম। আমি আপনার সেবায় আছি।",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/bn/bn_10.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/bn/bn_10.txt",
+  "char_count": 37,
+  "word_count": 6,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

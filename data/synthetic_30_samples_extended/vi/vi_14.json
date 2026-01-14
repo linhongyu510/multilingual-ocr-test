@@ -1,0 +1,12 @@
+{
+  "language": "vi",
+  "text": "Đây là một trải nghiệm tuyệt vời.",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/vi/vi_14.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch3/vi/vi_14.txt",
+  "char_count": 33,
+  "word_count": 7,
+  "font_used": "perfect_font_30_samples_batch3",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}

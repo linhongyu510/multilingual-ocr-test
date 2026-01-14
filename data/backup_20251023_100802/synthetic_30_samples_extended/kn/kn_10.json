@@ -1,0 +1,12 @@
+{
+  "language": "kn",
+  "text": "ಸ್ವಾಗತ. ನಾನು ನಿಮ್ಮ ಸೇವೆಯಲ್ಲಿದ್ದೇನೆ।",
+  "image_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/kn/kn_10.png",
+  "text_path": "/root/lhy/paddleocr/benchmarks/synthetic_30_samples_batch1/kn/kn_10.txt",
+  "char_count": 35,
+  "word_count": 4,
+  "font_used": "perfect_font_30_samples",
+  "no_garbled": true,
+  "is_full_text": true,
+  "sample_count": 30
+}
