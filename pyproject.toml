@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlocr-bench"
+version = "0.2.0"
+description = "Benchmark and validate multilingual OCR engines against synthetic datasets"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["ocr", "benchmark", "multilingual", "cer", "wer", "dataset-validation"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Image Recognition",
+  "Topic :: Software Development :: Testing",
+]
+
+# Pillow and numpy back the image quality validator, which is core
+# functionality rather than an optional extra.
+dependencies = [
+  "pillow>=9.0",
+  "numpy>=1.21",
+]
+
+[project.optional-dependencies]
+# Only needed to call a live OCR endpoint; validation and scoring work without it.
+http = ["requests>=2.25"]
+dev = [
+  "pytest>=7.0",
+  "requests>=2.25",
+]
+
+[project.scripts]
+mlocr-bench = "mlocr_bench.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/linhongyu510/multilingual-ocr-test"
+Issues = "https://github.com/linhongyu510/multilingual-ocr-test/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]

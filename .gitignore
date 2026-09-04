@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.installed.cfg
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+
+# Benchmark output — regenerate with `mlocr-bench run`; do not commit results.
+reports/
+*.log
+
+# Ad-hoc dataset snapshots. Keep the canonical dataset only; timestamped
+# backups double repo size and drift out of sync with it.
+data/backup_*/
+data/**/backup_*/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Secrets — the OCR API key belongs in the environment, never in the repo.
+.env
+.env.*
+!.env.example
+*.pem
+*.key

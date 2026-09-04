@@ -1,0 +1,406 @@
+{
+  "dataset_root": "/Users/bytedance/Doubao/chats/2026-09-05/new-chat-2/multilingual-ocr-test/data/synthetic_30_samples_extended",
+  "tool_version": "0.2.0",
+  "languages": {
+    "bn": {
+      "language": "bn",
+      "images": 30,
+      "glyph_blobs": 203,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "hi": {
+      "language": "hi",
+      "images": 30,
+      "glyph_blobs": 191,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "id": {
+      "language": "id",
+      "images": 30,
+      "glyph_blobs": 732,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1200x300": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "ja": {
+      "language": "ja",
+      "images": 30,
+      "glyph_blobs": 521,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "km": {
+      "language": "km",
+      "images": 30,
+      "glyph_blobs": 417,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1200x300": 30
+      },
+      "duplicate_texts": 1,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "1 duplicate ground-truth text(s)"
+    },
+    "kn": {
+      "language": "kn",
+      "images": 30,
+      "glyph_blobs": 417,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "ko": {
+      "language": "ko",
+      "images": 30,
+      "glyph_blobs": 478,
+      "tofu_blobs": 2,
+      "tofu_ratio_percent": 0.42,
+      "images_with_tofu": 2,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "lo": {
+      "language": "lo",
+      "images": 30,
+      "glyph_blobs": 515,
+      "tofu_blobs": 37,
+      "tofu_ratio_percent": 7.18,
+      "images_with_tofu": 30,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "2200x900": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "suspect",
+      "note": "7% of glyphs render as .notdef boxes (30/30 images) — generation font lacks this script"
+    },
+    "ml": {
+      "language": "ml",
+      "images": 30,
+      "glyph_blobs": 632,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "mn": {
+      "language": "mn",
+      "images": 30,
+      "glyph_blobs": 574,
+      "tofu_blobs": 500,
+      "tofu_ratio_percent": 87.11,
+      "images_with_tofu": 30,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 2,
+      "empty_texts": 0,
+      "verdict": "broken",
+      "note": "87% of glyphs render as .notdef boxes (30/30 images) — generation font lacks this script; 2 duplicate ground-truth text(s)"
+    },
+    "ms": {
+      "language": "ms",
+      "images": 30,
+      "glyph_blobs": 741,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1200x300": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "my": {
+      "language": "my",
+      "images": 30,
+      "glyph_blobs": 410,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "ne": {
+      "language": "ne",
+      "images": 30,
+      "glyph_blobs": 155,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "si": {
+      "language": "si",
+      "images": 30,
+      "glyph_blobs": 479,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "ta": {
+      "language": "ta",
+      "images": 30,
+      "glyph_blobs": 644,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "te": {
+      "language": "te",
+      "images": 30,
+      "glyph_blobs": 383,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "th": {
+      "language": "th",
+      "images": 30,
+      "glyph_blobs": 453,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "tl": {
+      "language": "tl",
+      "images": 30,
+      "glyph_blobs": 693,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1200x300": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "ug": {
+      "language": "ug",
+      "images": 30,
+      "glyph_blobs": 308,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1200x300": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "ur": {
+      "language": "ur",
+      "images": 30,
+      "glyph_blobs": 307,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 0,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "no issues detected"
+    },
+    "vi": {
+      "language": "vi",
+      "images": 30,
+      "glyph_blobs": 542,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1200x300": 30
+      },
+      "duplicate_texts": 1,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "1 duplicate ground-truth text(s)"
+    },
+    "zh": {
+      "language": "zh",
+      "images": 30,
+      "glyph_blobs": 276,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 1,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "1 duplicate ground-truth text(s)"
+    },
+    "zh-Hant": {
+      "language": "zh-Hant",
+      "images": 30,
+      "glyph_blobs": 273,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
+      "blank_images": 0,
+      "clipped_images": 0,
+      "image_sizes": {
+        "1400x500": 30
+      },
+      "duplicate_texts": 1,
+      "empty_texts": 0,
+      "verdict": "ok",
+      "note": "1 duplicate ground-truth text(s)"
+    }
+  },
+  "manifest_audit": {
+    "manifest_present": true,
+    "entries": 690,
+    "resolvable_paths": 690,
+    "unresolvable_paths": 0,
+    "duplicate_entries": 0,
+    "languages_in_manifest": 23,
+    "languages_on_disk": 23
+  }
+}

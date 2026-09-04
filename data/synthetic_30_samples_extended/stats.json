@@ -1,54 +1,155 @@
 {
-  "total_samples": 720,
-  "languages": 24,
+  "generated_by": "mlocr-bench 0.2.0 fix-manifest",
+  "total_samples": 690,
+  "languages": 23,
   "language_list": [
-    "my",
     "bn",
-    "ko",
     "hi",
-    "km",
-    "ne",
-    "zh",
+    "id",
     "ja",
-    "ur",
-    "ml",
+    "km",
     "kn",
+    "ko",
+    "lo",
+    "ml",
+    "mn",
+    "ms",
+    "my",
+    "ne",
     "si",
+    "ta",
     "te",
     "th",
-    "ta",
-    "zh-Hant",
-    "lo",
-    "id",
-    "vi",
     "tl",
-    "ms",
-    "km",
-    "mn",
-    "ug"
-  ],
-  "no_garbled": true,
-  "is_full_text": true,
-  "samples_per_language": 30,
-  "description": "扩展版多语言合成数据集 - 包含24种语言（原有16种 + 新增8种）",
-  "batch1_samples": 270,
-  "batch2_samples": 210,
-  "merged_from": [
-    "synthetic_30_samples_batch1",
-    "synthetic_30_samples_batch2"
-  ],
-  "new_languages": [
-    "lo",
-    "id",
+    "ug",
+    "ur",
     "vi",
-    "tl",
-    "ms",
-    "km",
-    "mn",
-    "ug"
+    "zh",
+    "zh-Hant"
   ],
-  "extended_from": [
-    "synthetic_30_samples_final",
-    "synthetic_30_samples_batch3"
-  ]
+  "samples_per_language": {
+    "bn": 30,
+    "hi": 30,
+    "id": 30,
+    "ja": 30,
+    "km": 30,
+    "kn": 30,
+    "ko": 30,
+    "lo": 30,
+    "ml": 30,
+    "mn": 30,
+    "ms": 30,
+    "my": 30,
+    "ne": 30,
+    "si": 30,
+    "ta": 30,
+    "te": 30,
+    "th": 30,
+    "tl": 30,
+    "ug": 30,
+    "ur": 30,
+    "vi": 30,
+    "zh": 30,
+    "zh-Hant": 30
+  },
+  "image_sizes": [
+    "1200x300",
+    "1400x500",
+    "2200x900"
+  ],
+  "data_quality": {
+    "bn": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "hi": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "id": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "ja": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "km": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "kn": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "ko": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.42
+    },
+    "lo": {
+      "verdict": "suspect",
+      "tofu_ratio_percent": 7.18
+    },
+    "ml": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "mn": {
+      "verdict": "broken",
+      "tofu_ratio_percent": 87.11
+    },
+    "ms": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "my": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "ne": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "si": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "ta": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "te": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "th": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "tl": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "ug": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "ur": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "vi": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "zh": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    },
+    "zh-Hant": {
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
+    }
+  },
+  "verified": true
 }
