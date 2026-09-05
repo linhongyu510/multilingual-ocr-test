@@ -5,8 +5,12 @@
   "text_path": "lo/lo_27.txt",
   "char_count": 21,
   "word_count": 1,
-  "font_used": "noto_font_final",
-  "no_garbled": true,
+  "font_used": "Lao Sangam MN.ttf",
   "is_full_text": true,
-  "sample_count": 30
+  "sample_count": 30,
+  "font_coverage_verified": true,
+  "regenerated_by": "tools/regenerate_language.py",
+  "regenerated_on": "2026-09-05",
+  "image_size": "2200x900",
+  "text_shaping": "harfbuzz"
 }

@@ -4,18 +4,28 @@ Benchmark an OCR engine across 23 languages, and **validate the dataset before
 trusting the score**.
 
 The headline feature is the second half of that sentence. A synthetic OCR corpus
-can fail in a way that no text-level check catches: when the generation font
-lacks glyphs for a script, the renderer writes `.notdef` boxes (*tofu*) while the
-ground-truth text stays perfectly correct. The engine then scores ~0% and it
-looks like a model defect. In this repository's own dataset, that is exactly what
-happened to Mongolian — **87% of its glyphs are hollow boxes**. See
-[`docs/DATA_QUALITY_AUDIT.md`](docs/DATA_QUALITY_AUDIT.md).
+can fail in ways that no text-level check catches, because the ground-truth text
+stays perfectly correct while the images do not:
+
+- the generation font lacks glyphs for the script, so the renderer writes
+  `.notdef` boxes (*tofu*);
+- the font has the glyphs but the renderer applies no **shaping**, so combining
+  marks land beside their base letter instead of on it.
+
+Either way the engine scores near 0% and it looks like a model defect. Both
+happened in this repository's own dataset: Mongolian was rendered with a font
+covering the *vertical* Mongolian script while the text is Mongolian **Cyrillic**
+(87% of its glyphs came out as hollow boxes), and Lao lost its tone marks to
+unshaped layout. Both are now fixed and the dataset validates clean — see
+[`docs/DATA_QUALITY_AUDIT.md`](docs/DATA_QUALITY_AUDIT.md) for the diagnosis and
+the fix.
 
 ## Install
 
 ```bash
 pip install -e .            # core: validation + metrics
 pip install -e ".[http]"    # also call a live OCR endpoint
+pip install -e ".[render]"  # also inspect fonts / regenerate images
 pip install -e ".[dev]"     # also run the tests
 ```
 
@@ -44,12 +54,19 @@ MLOCR_ENDPOINT=http://127.0.0.1:18110 mlocr-bench run --limit 3
 
 ## What `validate` tells you
 
+Current state of the bundled dataset — all 23 languages pass:
+
 ```
 lang      imgs   tofu%  blank  clip  dup  verdict
-mn          30    87.1      0     0    2  broken
-lo          30     7.2      0     0    0  suspect
+mn          30     0.0      0     0    2  ok
+lo          30     0.0      0     0    0  ok
 zh          30     0.0      0     0    1  ok
+...
+ok: 23   suspect: 0   broken: 0
 ```
+
+Before the font and shaping fixes, the same command reported `mn` at 87.1% tofu
+(`broken`) and `lo` at 7.2% (`suspect`).
 
 | Verdict | Meaning |
 |---|---|
@@ -58,6 +75,21 @@ zh          30     0.0      0     0    1  ok
 | `broken` | images cannot support a fair score — fix the data, not the model |
 
 `--strict` exits non-zero when anything is `broken`, so CI can gate on it.
+
+## Regenerating broken images
+
+```bash
+# See what would change, pick fonts, verify coverage — writes nothing
+python tools/regenerate_language.py --languages mn lo --dry-run
+
+# Re-render, then re-inspect every output; exits non-zero if tofu remains
+python tools/regenerate_language.py --languages mn lo
+```
+
+Ground truth is never touched — only the `.png` is redrawn. A font is used only
+after its cmap is confirmed to cover every character, and scripts with combining
+marks are rendered through HarfBuzz so the marks are positioned correctly. If no
+covering font is installed the tool fails loudly instead of emitting tofu.
 
 ## What `run` guarantees
 

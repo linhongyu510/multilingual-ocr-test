@@ -160,15 +160,23 @@ def _segment_blobs(band: np.ndarray, min_width: int = 8) -> list[tuple[int, int]
 
 
 def _is_tofu(glyph: np.ndarray) -> bool:
-    """True when a blob looks like a hollow ``.notdef`` rectangle.
+    """True when a blob is a ``.notdef``-style placeholder box.
 
-    ``.notdef`` is drawn as a rectangular outline: a solid border enclosing an
-    empty centre. The stroke width varies with font and point size (3px, 4px,
-    ...), and guessing it from the blob size is unreliable — overestimating by
-    one pixel pulls empty interior into the "border" sample and sinks its mean
-    below the threshold, silently missing broken glyphs. So each plausible
-    stroke width is tried and the blob counts as tofu if any of them yields a
-    solid ring around an empty centre.
+    Two variants occur in practice:
+
+    *Hollow box* — the classic ``.notdef``: a solid rectangular outline around
+    an empty centre. The stroke width varies with font and point size (3px,
+    4px, ...); guessing it from the blob size is unreliable, because
+    overestimating by one pixel pulls empty interior into the "border" sample
+    and sinks its mean below the threshold, silently missing broken glyphs. So
+    every plausible stroke width is tried.
+
+    *Box with a mark inside* — e.g. macOS ``LastResort`` draws a rounded box
+    containing a question mark. Its centre has ink, so the hollow test alone
+    misses it. It is still recognisable as a full rectangular ring enclosing a
+    small, centred mark that leaves the corners of the interior empty — real
+    letterforms in these scripts do not have a closed outer frame on all four
+    sides.
     """
     height, width = glyph.shape
     if height < 12 or width < 8:
@@ -189,8 +197,38 @@ def _is_tofu(glyph: np.ndarray) -> bool:
         interior = glyph[stroke + 1 : -(stroke + 1), stroke + 1 : -(stroke + 1)]
         if interior.size == 0:
             continue
+
+        # Variant 1: solid ring, empty inside.
         if ring.mean() > _TOFU_BORDER_MIN and interior.mean() < _TOFU_INTERIOR_MAX:
             return True
+
+        # Variant 2: a small centred mark inside a closed frame. Sampling the
+        # full ring is unreliable here because these placeholders have rounded
+        # corners, which drags the ring mean below the threshold. Instead check
+        # that the middle stretch of all four sides is solid — a frame — while
+        # the interior stays sparse with clear corners. Real letterforms in
+        # these scripts do not enclose themselves on all four sides.
+        ih, iw = interior.shape
+        if ih >= 6 and iw >= 6 and interior.mean() < 0.35:
+            mid_h = slice(height // 4, height - height // 4)
+            mid_w = slice(width // 4, width - width // 4)
+            sides = (
+                glyph[:stroke, mid_w].mean(),
+                glyph[-stroke:, mid_w].mean(),
+                glyph[mid_h, :stroke].mean(),
+                glyph[mid_h, -stroke:].mean(),
+            )
+            ch, cw = max(1, ih // 4), max(1, iw // 4)
+            corners = np.concatenate(
+                [
+                    interior[:ch, :cw].ravel(),
+                    interior[:ch, -cw:].ravel(),
+                    interior[-ch:, :cw].ravel(),
+                    interior[-ch:, -cw:].ravel(),
+                ]
+            )
+            if min(sides) > 0.95 and corners.mean() < 0.02:
+                return True
     return False
 
 

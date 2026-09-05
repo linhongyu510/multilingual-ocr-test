@@ -10,29 +10,44 @@ mlocr-bench validate --json docs/data_quality_audit.json
 
 ## Why this audit exists
 
-A synthetic OCR corpus can fail in a way no text-level check catches. If the
-font used at generation time has no glyphs for a script, the renderer emits
-`.notdef` — the hollow rectangle known as *tofu*. The ground-truth `.txt` still
-holds perfect text, so manifests, encodings and character counts all look
-correct, while the image contains no readable script at all.
+A synthetic OCR corpus can fail in ways no text-level check catches. The
+ground-truth `.txt` holds perfect text, so manifests, encodings and character
+counts all look correct — while the image is unreadable. Two distinct failures
+were found here:
+
+1. **Missing coverage.** The generation font has no glyphs for the script, so the
+   renderer emits `.notdef` — the hollow rectangle known as *tofu*.
+2. **Missing shaping.** The font has the glyphs, but the renderer applies no
+   complex-text layout, so combining marks are placed beside their base letter
+   instead of above or below it.
 
 An OCR engine scored on such images returns ~0% accuracy. Read without this
 audit, that looks like an engine defect. It is a data defect.
 
-## Dataset as measured
+## Current state — all languages pass
+
+Both defects have been fixed and the images regenerated. Ground truth was never
+modified.
 
 | Property | Value |
 |---|---|
 | Languages on disk | 23 |
 | Images | 690 (30 per language) |
-| Glyph blobs analysed | 10,344 |
-| Glyph blobs rendered as `.notdef` | 539 (5.2%) |
+| Glyph blobs analysed | 10,430 |
+| Glyph blobs rendered as `.notdef` | 2 (0.02%, all in `ko`) |
+| `mn` / `lo` `.notdef` blobs | **0** (were 500 and 37) |
 | Distinct ground-truth texts | 684 of 690 (6 duplicates) |
 | Image dimensions | `1200x300`, `1400x500`, `2200x900` |
 | Blank images | 0 |
 | Clipped images | 0 |
+| Verdicts | **ok: 23, suspect: 0, broken: 0** |
 
-## Verdicts
+`mlocr-bench validate --strict` exits 0. The two residual blobs in `ko` are
+0.4% of that language, far below the 5% `suspect` threshold; Hangul syllable
+blocks are square by construction, so a small number of enclosed forms is
+expected rather than a rendering failure.
+
+## The defects, as originally measured
 
 | Verdict | Count | Languages |
 |---|---|---|
@@ -40,36 +55,89 @@ audit, that looks like an engine defect. It is a data defect.
 | `suspect` | 1 | lo |
 | `broken` | 1 | mn |
 
-### `mn` (Mongolian Cyrillic) — broken, do not score
+Across the corpus, 539 of 10,344 glyph blobs (5.2%) were `.notdef`.
 
-| Metric | Value |
+### `mn` (Mongolian Cyrillic) — was broken
+
+| Metric | Before | After |
+|---|---|---|
+| Glyph blobs | 574 | 678 |
+| `.notdef` blobs | 500 (**87.1%**) | **0** |
+| Images affected | 30 of 30 | 0 |
+
+All 30 images rendered as hollow boxes; none contained Cyrillic.
+
+**Root cause — two compounding mistakes.**
+
+The sidecar JSON recorded `"font_used": "NotoSansMongolian-Regular-72px"` with
+`"no_garbled": true`. But **Noto Sans Mongolian covers the traditional vertical
+Mongolian script, not Cyrillic**, and this corpus is Mongolian Cyrillic. The
+font named in the metadata could not have rendered this text under any
+circumstances, and the `no_garbled` claim was never verified.
+
+In the generators, `mn` is absent from every font table:
+`gen_30_samples_batch2.py` covers only `si`, `ta`, `te`, `th`, `ur`, `zh`,
+`zh-Hant`; `gen_synthetic_extended.py` — which actually produces `mn` — resolves
+fonts through hardcoded Linux paths such as
+`/usr/share/fonts/truetype/noto/NotoSans-Regular.ttf`, none of which exist on the
+generating machine, and ends with `return ImageFont.load_default()`. The glyph
+self-test `test_font_perfect()` ends with a bare `return True`, so any language
+without an explicit probe string was declared "perfect" unchecked.
+
+This was never a font-availability problem: 121 fonts on this machine cover the
+required Cyrillic range. The generator simply never asked for one.
+
+**Fix.** `tools/regenerate_language.py` re-rendered all 30 images with a font
+whose cmap was verified to contain every character (`Arial Unicode.ttf`), then
+re-inspected each output. Verified visually: legible Cyrillic matching the
+ground truth.
+
+### `lo` (Lao) — was suspect
+
+| Metric | Before | After |
+|---|---|---|
+| Glyph blobs | 515 | 497 |
+| `.notdef` blobs | 37 (**7.2%**) | **0** |
+| Images affected | 30 of 30 | 0 |
+
+**Root cause — shaping, not coverage.** This one is subtler, and a font swap
+does not fix it. Lao places tone marks and vowel signs above and below the base
+consonant. Correct placement requires a shaping engine to apply mark
+positioning, where combining marks carry a zero advance and stack onto the
+preceding glyph.
+
+`PIL.ImageDraw.text` only shapes text when Pillow was built against **libraqm**.
+The Pillow build here reports `features.check("raqm") is False`, so it advanced
+the pen by each character's own width and every mark landed *next to* its base
+instead of on it. Re-rendering with a dedicated Lao font produced the same
+defect, which is what identified layout rather than the font as the cause.
+
+**Fix.** Shaping is now performed explicitly in `src/mlocr_bench/shaping.py`:
+HarfBuzz (`uharfbuzz`) computes glyph ids and positions, and FreeType
+(`freetype-py`) rasterises each glyph *by glyph id* — something PIL cannot do.
+Combining marks are drawn at their negative offsets, back over the base glyph.
+Verified visually: tone marks correctly attached, `ຫຼ` forming its proper
+ligature.
+
+The other 12 languages whose scripts need shaping (`th`, `km`, `my`, `hi`, `ne`,
+`bn`, `ta`, `te`, `kn`, `ml`, `si`, `ur`, `ug`) were inspected image by image and
+found **already correct**, so they were left untouched rather than regenerated.
+
+`lo` images remain `2200x900` while most of the corpus is `1400x500`. The
+original canvas size was preserved deliberately, since size variation may be an
+intentional robustness dimension.
+
+## Guards added so this cannot recur
+
+| Guard | Behaviour |
 |---|---|
-| Glyph blobs | 574 |
-| `.notdef` blobs | 500 (**87.1%**) |
-| Images affected | 30 of 30 |
-
-All 30 images render as hollow boxes; none contains Cyrillic. Any accuracy
-number for `mn` measures the dataset, not the engine.
-
-**Root cause.** In `data/generators/gen_30_samples_batch2.py`, the
-`get_perfect_font_for_language()` font table has entries for `si`, `ta`, `te`,
-`th`, `ur`, `zh` and `zh-Hant` — but **no entry for `mn`**. Its glyph self-test
-`test_font_perfect()` has no probe string for `mn` either. So generation fell
-through to `ImageFont.load_default()`, a bitmap font with no Cyrillic coverage,
-and the missing self-test meant nothing flagged it. 30 unusable images were
-written while the run reported success.
-
-This is not a font-availability problem: `tools/check_font_coverage.py` finds
-**121 fonts on this machine** that cover the required Cyrillic range. The
-generator simply never asked for one.
-
-### `lo` (Lao) — suspect, interpret with care
-
-37 of 515 glyph blobs (7.2%) are `.notdef`, spread across all 30 images. The Lao
-consonants and vowels render correctly; specific marks do not. Scores are
-usable as a lower bound but are depressed by a data defect, not only by engine
-limits. These images are also `2200x900` while most of the corpus is
-`1400x500`.
+| `src/mlocr_bench/fonts.py` | Selects a font only after confirming its cmap covers every character; raises `FontCoverageError` instead of falling back to `load_default()` |
+| Placeholder-font exclusion | Fonts like macOS `LastResort` declare huge coverage but draw a box-with-question-mark; excluded by name, since coverage checks alone accept them |
+| `src/mlocr_bench/shaping.py` | Refuses to render a shaping-required script when HarfBuzz/FreeType are unavailable, rather than emitting misplaced marks |
+| `tools/regenerate_language.py` | Re-inspects every image it writes and exits non-zero if any tofu remains |
+| Extended tofu detector | Now catches both hollow boxes and boxes containing a placeholder mark |
+| `tools/check_font_coverage.py` | Standalone gate; exits non-zero if any language lacks a covering font |
+| Metadata | Records `font_used`, `font_coverage_verified` and `text_shaping`; the unverifiable `no_garbled` claim was removed |
 
 ## Metadata drift (fixed)
 

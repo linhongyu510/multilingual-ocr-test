@@ -31,9 +31,21 @@ dependencies = [
 [project.optional-dependencies]
 # Only needed to call a live OCR endpoint; validation and scoring work without it.
 http = ["requests>=2.25"]
+# Needed to inspect font cmaps and to regenerate images for scripts with
+# combining marks. Pillow's own text layout only shapes text when it was built
+# against libraqm, which prebuilt wheels usually are not, so shaping is done
+# explicitly through HarfBuzz + FreeType.
+render = [
+  "fonttools>=4.38",
+  "uharfbuzz>=0.30",
+  "freetype-py>=2.3",
+]
 dev = [
   "pytest>=7.0",
   "requests>=2.25",
+  "fonttools>=4.38",
+  "uharfbuzz>=0.30",
+  "freetype-py>=2.3",
 ]
 
 [project.scripts]

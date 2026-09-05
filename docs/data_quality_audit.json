@@ -124,10 +124,10 @@
     "lo": {
       "language": "lo",
       "images": 30,
-      "glyph_blobs": 515,
-      "tofu_blobs": 37,
-      "tofu_ratio_percent": 7.18,
-      "images_with_tofu": 30,
+      "glyph_blobs": 497,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
       "blank_images": 0,
       "clipped_images": 0,
       "image_sizes": {
@@ -135,8 +135,8 @@
       },
       "duplicate_texts": 0,
       "empty_texts": 0,
-      "verdict": "suspect",
-      "note": "7% of glyphs render as .notdef boxes (30/30 images) — generation font lacks this script"
+      "verdict": "ok",
+      "note": "no issues detected"
     },
     "ml": {
       "language": "ml",
@@ -158,10 +158,10 @@
     "mn": {
       "language": "mn",
       "images": 30,
-      "glyph_blobs": 574,
-      "tofu_blobs": 500,
-      "tofu_ratio_percent": 87.11,
-      "images_with_tofu": 30,
+      "glyph_blobs": 678,
+      "tofu_blobs": 0,
+      "tofu_ratio_percent": 0.0,
+      "images_with_tofu": 0,
       "blank_images": 0,
       "clipped_images": 0,
       "image_sizes": {
@@ -169,8 +169,8 @@
       },
       "duplicate_texts": 2,
       "empty_texts": 0,
-      "verdict": "broken",
-      "note": "87% of glyphs render as .notdef boxes (30/30 images) — generation font lacks this script; 2 duplicate ground-truth text(s)"
+      "verdict": "ok",
+      "note": "2 duplicate ground-truth text(s)"
     },
     "ms": {
       "language": "ms",

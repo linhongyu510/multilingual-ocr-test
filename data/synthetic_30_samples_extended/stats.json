@@ -87,16 +87,16 @@
       "tofu_ratio_percent": 0.42
     },
     "lo": {
-      "verdict": "suspect",
-      "tofu_ratio_percent": 7.18
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
     },
     "ml": {
       "verdict": "ok",
       "tofu_ratio_percent": 0.0
     },
     "mn": {
-      "verdict": "broken",
-      "tofu_ratio_percent": 87.11
+      "verdict": "ok",
+      "tofu_ratio_percent": 0.0
     },
     "ms": {
       "verdict": "ok",

@@ -5,11 +5,13 @@
   "text_path": "mn/mn_22.txt",
   "char_count": 24,
   "word_count": 4,
-  "font_used": "NotoSansMongolian-Regular-72px",
-  "no_garbled": true,
+  "font_used": "Arial Unicode.ttf",
   "is_full_text": true,
   "sample_count": 30,
   "regenerated": true,
   "regeneration_date": "2025-10-23",
-  "font_optimized": true
+  "font_coverage_verified": true,
+  "regenerated_by": "tools/regenerate_language.py",
+  "regenerated_on": "2026-09-05",
+  "image_size": "1400x500"
 }
